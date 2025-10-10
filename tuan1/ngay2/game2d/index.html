@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Caro 3x3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Game Caro 3x3</h1>
+      <div class="game-info">
+        <div class="player-turn">
+          <span id="current-player">Lượt của: X</span>
+        </div>
+        <div class="score">
+          <span>X: <span id="score-x">0</span></span>
+          <span>O: <span id="score-o">0</span></span>
+          <span>Hòa: <span id="score-tie">0</span></span>
+        </div>
+      </div>
+
+      <div class="game-board" id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <div class="game-controls">
+        <button id="reset-game" class="btn">Chơi lại</button>
+        <button id="reset-score" class="btn">Reset điểm</button>
+      </div>
+
+      <div id="game-message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

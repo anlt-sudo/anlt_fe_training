@@ -1,0 +1,190 @@
+body {
+  font-family: "Times New Roman PSMT", "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 502px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.header {
+  height: 25px;
+  background-image: url("public/title_bg.gif");
+  background-repeat: repeat-x;
+  padding: 5px 10px;
+}
+.header h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.main-info {
+  height: 100px;
+  display: flex;
+  padding: 10px;
+  overflow: auto;
+}
+.main-info .avatar {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.main-info .avatar img {
+  width: 100px;
+  height: 90px;
+}
+.main-info .player-details {
+  flex: 1;
+  font-size: 15px;
+  line-height: 16px;
+  min-width: 350px;
+  height: 80px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  padding: 5px;
+}
+.main-info .player-details div {
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.facts {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.facts h3 {
+  margin: 0 0 10px 0;
+  font-size: 17px;
+  font-weight: bold;
+}
+.facts ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+.facts ul li {
+  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+  padding-left: 23px;
+}
+.facts ul li .star-icon {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.comments-section {
+  padding: 2px;
+  margin-bottom: 0;
+}
+.comments-section .comment {
+  margin-bottom: 15px;
+}
+.comments-section .comment .comment-content {
+  background-color: #ececec;
+  padding: 8px;
+  font-size: 15px;
+  line-height: 16px;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+.comments-section .comment .comment-content::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #ececec;
+}
+.comments-section .comment .comment-bottom {
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+  margin-left: 15px;
+}
+.comments-section .comment .comment-triangle {
+  width: 0;
+  height: 20px;
+  flex-shrink: 0;
+}
+.comments-section .comment .comment-author {
+  font-size: 13px;
+  color: #666;
+  margin-left: 30px;
+}
+.comments-section .comment .comment-author a {
+  color: #0033ff;
+  text-decoration: none;
+}
+.comments-section .comment .comment-author a:hover {
+  text-decoration: underline;
+}
+.comments-section .comment:last-child .comment-author {
+  margin-bottom: 0;
+}
+
+.your-comment {
+  padding: 0 4px;
+}
+.your-comment h3 {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.your-comment table {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.your-comment table td {
+  vertical-align: top;
+  font-weight: bold;
+}
+.your-comment table td:first-child {
+  width: 120px;
+  font-weight: normal;
+}
+.your-comment table input[type=text],
+.your-comment table input[type=email] {
+  width: 148px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  font-family: "Times New Roman PSMT", "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+.your-comment table textarea {
+  width: calc(100% - 5px);
+  height: 60px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  font-family: "Times New Roman PSMT", "Times New Roman", Times, serif;
+  font-size: 15px;
+  resize: vertical;
+}
+
+/**
+* Custom Font
+*/
+@font-face {
+  font-family: "Times New Roman PSMT";
+  src: url("/font/TimesNewRomanPSMT Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

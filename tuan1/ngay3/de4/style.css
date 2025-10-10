@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Satoshi", "Times New Roman", Times, serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 96px;
+  background-color: white;
+}
+
+.product-tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.product-tabs .tab {
+  padding: 15px 146px;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.product-tabs .tab.active {
+  color: #000;
+  border-bottom-color: #000;
+  font-weight: 600;
+}
+
+.reviews-section {
+  margin-bottom: 60px;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.reviews-header .reviews-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reviews-header .reviews-title h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.reviews-header .reviews-title .review-count {
+  color: #666;
+  font-size: 16px;
+}
+.reviews-header .reviews-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.reviews-header .reviews-controls .filter-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.reviews-header .reviews-controls .filter-sort .filter-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 40px;
+}
+.reviews-header .reviews-controls .filter-sort .filter-btn img {
+  width: 16px;
+  height: 16px;
+}
+.reviews-header .reviews-controls .filter-sort .sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.reviews-header .reviews-controls .filter-sort .sort-dropdown img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+.reviews-header .reviews-controls .write-review-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 0 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.reviews-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  width: 610px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.review-item .review-content {
+  flex: 1;
+}
+.review-item .review-content .review-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+.review-item .review-content .review-stars img {
+  width: 16px;
+  height: 16px;
+}
+.review-item .review-content .review-stars .start-half {
+  width: 8px;
+  height: 16px;
+  overflow: hidden;
+}
+.review-item .review-content .reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.review-item .review-content .reviewer-info .reviewer-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+.review-item .review-content .reviewer-info .verified {
+  color: #4caf50;
+  font-size: 14px;
+  background-color: #e8f5e8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.review-item .review-content .reviewer-info .icon-check-img {
+  width: 19px;
+  height: 19px;
+}
+.review-item .review-content .review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 10px;
+}
+.review-item .review-content .review-date {
+  font-size: 12px;
+  color: #999;
+}
+.review-item .review-menu {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.load-more-btn {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.suggestions-section h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-size: 48px;
+  color: #000;
+  font-style: bold;
+  font-family: "Satoshi bold", "Times New Roman", Times, serif;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  width: 296px;
+}
+.product-card .product-image {
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+}
+.product-card .product-image img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.product-card .product-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: bold;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: #000;
+}
+.product-card .product-rating {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.product-card .product-rating .stars {
+  display: flex;
+  gap: 2px;
+}
+.product-card .product-rating .stars img {
+  width: 16px;
+  height: 16px;
+}
+.product-card .product-rating .rating-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.product-card .product-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product-card .product-price .current-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+.product-card .product-price .original-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #999;
+  text-decoration: line-through;
+}
+.product-card .product-price .discount {
+  font-size: 12px;
+  color: #ff3333;
+  background-color: #ffebec;
+  padding: 2px 6px;
+  border-radius: 62px;
+}
+
+/**
+  Custom Fonts
+*/
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi bold";
+  src: url("/fonts/Satoshi-Bold.otf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

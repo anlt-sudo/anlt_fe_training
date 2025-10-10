@@ -1,0 +1,222 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial MT", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  min-width: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 316px;
+  margin: 0;
+  padding: 10px;
+  background-color: #e6f3fb;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Blogroll Section */
+.blogroll-section .section-title {
+  margin: 0;
+}
+.blogroll-section .blogroll-content {
+  background-color: #ffffff;
+  border-top: 4px solid #ffa500;
+}
+.blogroll-section .blogroll-content .news-item {
+  display: flex;
+  padding: 8px;
+  border-bottom: 1px solid #cccccc;
+}
+.blogroll-section .blogroll-content .news-item .news-image {
+  width: 160px;
+  height: 100px;
+  border: 1px solid #cccccc;
+  margin-right: 8px;
+  object-fit: cover;
+}
+.blogroll-section .blogroll-content .news-item .news-text {
+  flex: 1;
+}
+.blogroll-section .blogroll-content .news-item .news-text .news-title {
+  color: #0a6395;
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+.blogroll-section .blogroll-content .news-item .news-text p {
+  font-size: 12px;
+  line-height: 1.3;
+}
+.blogroll-section .blogroll-content .news-item .news-text p em {
+  font-style: italic;
+}
+.blogroll-section .blogroll-content .blog-links {
+  list-style: none;
+  padding: 0;
+}
+.blogroll-section .blogroll-content .blog-links li {
+  background-color: #faf0bf;
+  padding: 6px 8px;
+  border-bottom: 1px solid #cccccc;
+}
+.blogroll-section .blogroll-content .blog-links li:last-child {
+  border-bottom: none;
+}
+.blogroll-section .blogroll-content .blog-links li strong {
+  color: #0a6395;
+}
+
+/* Links */
+a {
+  color: #0a6395;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Horoscopes Section */
+.horoscopes-section {
+  margin-bottom: 15px;
+}
+.horoscopes-section .horoscope-content {
+  border-top: 4px solid #ffa500;
+}
+.horoscopes-section .horoscope-content .horoscope-top {
+  background-color: #ffffff;
+  padding: 8px;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info {
+  display: flex;
+  align-items: flex-start;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-image {
+  width: 80px;
+  height: 100px;
+  margin-right: 8px;
+  object-fit: cover;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-text {
+  flex: 1;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-text h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-text .date {
+  color: #808080;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-text p {
+  font-size: 12px;
+  line-height: 1.3;
+}
+.horoscopes-section .horoscope-content .horoscope-top .zodiac-info .zodiac-text .more-link {
+  color: #0a6395;
+  text-decoration: underline;
+}
+.horoscopes-section .horoscope-content .horoscope-bottom {
+  background-color: #f4f4ec;
+  background-image: url("public/img-3.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding: 8px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 50px;
+}
+.horoscopes-section .horoscope-content .horoscope-bottom .author-info {
+  flex: 1;
+}
+.horoscopes-section .horoscope-content .horoscope-bottom .author-info p {
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+.horoscopes-section .horoscope-content .horoscope-bottom .author-info .read-all-link {
+  font-size: 12px;
+  color: #0a6395;
+  font-weight: bold;
+}
+
+/* Get news on the go Section */
+.news-mobile-section {
+  margin-bottom: 0;
+}
+.news-mobile-section .mobile-content {
+  background-color: #ffffff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  border-top: 4px solid #ffa500;
+}
+.news-mobile-section .mobile-content .mobile-text {
+  flex: 1;
+  margin-right: 8px;
+  padding: 16px;
+}
+.news-mobile-section .mobile-content .mobile-text p {
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.news-mobile-section .mobile-content .mobile-text .mobile-link {
+  color: #0a6395;
+  font-size: 12px;
+}
+.news-mobile-section .mobile-content .mobile-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.news-mobile-section .separator {
+  height: 1px;
+  background-color: #000;
+  margin-top: 8px;
+}
+
+/* Competions Section */
+.competions-section .section-title {
+  margin: 0;
+  color: #000;
+}
+.competions-section .competion-content {
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  font-family: "Times New Roman", Times, serif;
+  color: #58585a;
+}
+.competions-section .competion-content p {
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.competions-section .competion-content p:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
