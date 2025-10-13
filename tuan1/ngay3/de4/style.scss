@@ -26,11 +26,13 @@ body {
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 
   .tab {
-    padding: 15px 146px;
-    font-size: 16px;
+    padding: 10px 0 16px 0;
+    text-align: center;
+    width: 414px;
+    font-size: 20px;
     color: #666;
     cursor: pointer;
     border-bottom: 2px solid transparent;
@@ -52,7 +54,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  padding: 0 4px;
 
   .reviews-title {
     display: flex;
@@ -74,6 +77,8 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
 
     .filter-sort {
       display: flex;
@@ -84,13 +89,13 @@ body {
         background: none;
         border: 1px solid #ddd;
         padding: 10px 12px;
-        border-radius: 20px;
+        border-radius: 62px;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
-        min-width: 40px;
+        height: 48px;
+        min-width: 48px;
 
         img {
           width: 16px;
@@ -101,13 +106,15 @@ body {
       .sort-dropdown {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        color: #000;
         gap: 8px;
-        padding: 10px 12px;
+        padding: 10px 16px;
         border: 1px solid #ddd;
-        border-radius: 20px;
+        border-radius: 62px;
         cursor: pointer;
-        font-size: 14px;
-        height: 40px;
+        height: 48px;
+        width: 120px;
         box-sizing: border-box;
 
         img {
@@ -123,13 +130,15 @@ body {
       color: white;
       border: none;
       padding: 0 24px;
-      border-radius: 25px;
+      border-radius: 62px;
       cursor: pointer;
       font-size: 14px;
       font-weight: 500;
-      height: 40px;
+      height: 48px;
+      width: 166px;
       display: flex;
       align-items: center;
+      justify-content: center;
       box-sizing: border-box;
     }
   }
@@ -161,13 +170,13 @@ body {
       margin-bottom: 10px;
 
       img {
-        width: 16px;
-        height: 16px;
+        width: 22px;
+        height: 22px;
       }
 
       .start-half {
-        width: 8px;
-        height: 16px;
+        width: 11px;
+        height: 22px;
         overflow: hidden;
       }
     }
@@ -179,8 +188,9 @@ body {
       margin-bottom: 10px;
 
       .reviewer-name {
-        font-weight: 600;
-        font-size: 16px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #000;
       }
 
       .verified {
@@ -196,8 +206,8 @@ body {
         font-weight: bold;
       }
       .icon-check-img {
-        width: 19px;
-        height: 19px;
+        width: 20px;
+        height: 20px;
       }
     }
 

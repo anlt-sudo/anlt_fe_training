@@ -22,11 +22,13 @@ body {
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .product-tabs .tab {
-  padding: 15px 146px;
-  font-size: 16px;
+  padding: 10px 0 16px 0;
+  text-align: center;
+  width: 414px;
+  font-size: 20px;
   color: #666;
   cursor: pointer;
   border-bottom: 2px solid transparent;
@@ -45,7 +47,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  padding: 0 4px;
 }
 .reviews-header .reviews-title {
   display: flex;
@@ -64,6 +67,8 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .reviews-header .reviews-controls .filter-sort {
   display: flex;
@@ -74,13 +79,13 @@ body {
   background: none;
   border: 1px solid #ddd;
   padding: 10px 12px;
-  border-radius: 20px;
+  border-radius: 62px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  min-width: 40px;
+  height: 48px;
+  min-width: 48px;
 }
 .reviews-header .reviews-controls .filter-sort .filter-btn img {
   width: 16px;
@@ -89,13 +94,15 @@ body {
 .reviews-header .reviews-controls .filter-sort .sort-dropdown {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: #000;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 16px;
   border: 1px solid #ddd;
-  border-radius: 20px;
+  border-radius: 62px;
   cursor: pointer;
-  font-size: 14px;
-  height: 40px;
+  height: 48px;
+  width: 120px;
   box-sizing: border-box;
 }
 .reviews-header .reviews-controls .filter-sort .sort-dropdown img {
@@ -108,13 +115,15 @@ body {
   color: white;
   border: none;
   padding: 0 24px;
-  border-radius: 25px;
+  border-radius: 62px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  height: 40px;
+  height: 48px;
+  width: 166px;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 }
 
@@ -144,12 +153,12 @@ body {
   margin-bottom: 10px;
 }
 .review-item .review-content .review-stars img {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
 }
 .review-item .review-content .review-stars .start-half {
-  width: 8px;
-  height: 16px;
+  width: 11px;
+  height: 22px;
   overflow: hidden;
 }
 .review-item .review-content .reviewer-info {
@@ -159,8 +168,9 @@ body {
   margin-bottom: 10px;
 }
 .review-item .review-content .reviewer-info .reviewer-name {
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
 }
 .review-item .review-content .reviewer-info .verified {
   color: #4caf50;
@@ -175,8 +185,8 @@ body {
   font-weight: bold;
 }
 .review-item .review-content .reviewer-info .icon-check-img {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
 }
 .review-item .review-content .review-text {
   font-size: 14px;

@@ -10,7 +10,7 @@
 
 body {
   font-family: "Times New Roman PSMT", "Times New Roman", Times, serif;
-  font-size: 11px;
+  font-size: 12px;
   background-color: #121214;
   color: #ffffff;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 .header__title {
-  font-size: 11px;
+  font-size: 12px;
   color: #58585a;
 }
 
@@ -64,7 +64,7 @@ body {
   width: 436px;
   display: flex;
   flex-direction: column;
-  padding-right: 32px;
+  padding-right: 30px;
 }
 
 .content-section {
@@ -73,21 +73,22 @@ body {
 }
 
 .content-section__title {
-  font-size: 11px;
+  font-size: 12px;
   margin-bottom: 42px;
   color: #58585a;
 }
 
 .section__subtitle-section {
-  font-size: 11px;
+  font-size: 12px;
   color: #fff;
   margin-bottom: 16px;
 }
 
 .content-section__text {
-  font-size: 11px;
+  font-size: 12px;
   color: #58585a;
   text-align: left;
+  line-height: 0.8;
 }
 
 /* ==========================================================================
@@ -100,13 +101,11 @@ body {
 }
 
 .team-photo {
-  width: 130px;
-  height: 96px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   color: #888;
-  font-size: 11px;
+  font-size: 12px;
   flex-shrink: 0;
 }
 
@@ -116,8 +115,13 @@ body {
   margin-left: 4px;
 }
 
+.team-pic-title {
+  padding-top: 32px;
+}
+
 .text-content {
   flex: 1;
+  padding-left: 0;
 }
 
 .content-section__subtitle {
@@ -131,14 +135,15 @@ body {
    ========================================================================== */
 
 .stats {
-  font-size: 11px;
+  font-size: 12px;
   color: #58585a;
   border-bottom: 1px dotted #444;
+  margin-bottom: 4px;
 }
 
 .stats-description {
   text-indent: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .more-info--indented {
@@ -190,7 +195,7 @@ body {
 .content-wrapper-narrow {
   max-width: 320px;
   margin: 0 auto;
-  padding: 32px 10px 0;
+  padding: 8px 10px 0;
 }
 
 .logo-section {
@@ -210,31 +215,29 @@ body {
   justify-content: center;
   font-size: 11px;
   color: #ffffff;
-  margin: 40px auto 16px;
+  margin: 24px auto 16px;
 }
 
 .logo img {
-  width: 170px;
-  height: 90px;
+  width: 174px;
+  height: 96px;
   object-fit: cover;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 12px;
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 8px;
 }
 
 .logo-section__text {
-  font-size: 11px;
+  font-size: 12px;
   color: #fff;
   text-align: justify;
+  margin-bottom: 4px;
 }
 
 .sidebar-content {
-  font-size: 11px;
+  font-size: 12px;
   color: #999;
   line-height: 1.6;
   text-align: justify;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  line-height: 1;
 }
 
 .special-content {
@@ -246,20 +249,19 @@ body {
    ========================================================================== */
 
 .bottom-content {
-  margin-top: 20px;
+  margin-top: 52px;
   margin-left: 16px;
 }
 
 .bottom-content__title {
-  font-size: 11px;
-  margin-bottom: 10px;
+  font-size: 12px;
   color: #ffffff;
 }
 
 .bottom-content__text {
-  font-size: 11px;
+  font-size: 12px;
   color: #58585a;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* ==========================================================================
@@ -277,15 +279,17 @@ body {
 }
 
 .link-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   list-style: none;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .link-list__item {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: flex;
   align-items: flex-start;
-  gap: 4px;
+  gap: 2px;
 }
 
 .link-list__item::before {
