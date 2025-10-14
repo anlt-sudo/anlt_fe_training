@@ -1,0 +1,9 @@
+thêm thuộc tính text indent
+
+
+Lưu ý đề số 3
+lưu ý về đổ dữ liệu
+
+xử lý ảnh là null
+
+xử lý text dài cho thẻ card

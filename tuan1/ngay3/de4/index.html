@@ -10,344 +10,552 @@
     <div class="container">
       <!-- Product Details Tabs -->
       <div class="product-tabs">
-        <div class="tab">Product Details</div>
-        <div class="tab active">Rating & Reviews</div>
-        <div class="tab">FAQs</div>
+        <div class="tab" data-tab="product-details">Product Details</div>
+        <div class="tab active" data-tab="rating-reviews">Rating & Reviews</div>
+        <div class="tab" data-tab="faqs">FAQs</div>
       </div>
 
-      <!-- Reviews Section -->
-      <div class="reviews-section">
-        <div class="reviews-header">
-          <div class="reviews-title">
-            <h3>All Reviews</h3>
-            <span class="review-count">(451)</span>
-          </div>
-          <div class="reviews-controls">
-            <div class="filter-sort">
-              <button class="filter-btn">
-                <img src="public/filter-icon.png" alt="Filter" />
-              </button>
-              <div class="sort-dropdown">
-                <span>Latest</span>
-                <img src="public/narrow-icon.png" alt="Dropdown" />
-              </div>
-            </div>
-            <button class="write-review-btn">Write a Review</button>
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- Product Details Tab -->
+        <div class="tab-panel" id="product-details" style="display: none">
+          <div class="tab-content-wrapper">
+            <h2>Product Details</h2>
+            <p>
+              Here you can find detailed information about this product
+              including specifications, materials, care instructions, and more.
+            </p>
           </div>
         </div>
 
-        <!-- Reviews List -->
-        <div class="reviews-list">
-          <!-- Review 1 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img
-                    src="public/star-half.png"
-                    class="start-half"
-                    alt="star"
-                  />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
-                </div>
+        <!-- Rating & Reviews Tab -->
+        <div class="tab-panel active" id="rating-reviews">
+          <!-- Reviews Section -->
+          <div class="reviews-section">
+            <div class="reviews-header">
+              <div class="reviews-title">
+                <h3>All Reviews</h3>
+                <span class="review-count">(451)</span>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Samantha D.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
+              <div class="reviews-controls">
+                <div class="filter-sort">
+                  <div class="filter-container">
+                    <button class="filter-btn">
+                      <img src="public/filter-icon.png" alt="Filter" />
+                    </button>
+                    <div class="filter-dropdown" id="filterDropdown">
+                      <div class="filter-option" data-rating="5">
+                        <div class="filter-stars">
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                        </div>
+                      </div>
+                      <div class="filter-option" data-rating="4">
+                        <div class="filter-stars">
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                        </div>
+                      </div>
+                      <div class="filter-option" data-rating="3">
+                        <div class="filter-stars">
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                        </div>
+                      </div>
+                      <div class="filter-option" data-rating="2">
+                        <div class="filter-stars">
+                          <img src="public/star.png" alt="star" />
+                          <img src="public/star.png" alt="star" />
+                        </div>
+                      </div>
+                      <div class="filter-option" data-rating="1">
+                        <div class="filter-stars">
+                          <img src="public/star.png" alt="star" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sort-dropdown">
+                    <span>Latest</span>
+                    <img src="public/narrow-icon.png" alt="Dropdown" />
+                  </div>
+                </div>
+                <button class="write-review-btn">Write a Review</button>
               </div>
-              <p class="review-text">
-                "I absolutely love this t-shirt! The design is unique and the
-                fabric feels so comfortable. As a fellow designer, I appreciate
-                the attention to detail. It's become my favorite go-to shirt."
-              </p>
-              <div class="review-date">Posted on August 14, 2023</div>
             </div>
-          </div>
 
-          <!-- Review 2 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
+            <!-- Reviews List -->
+            <div class="reviews-list">
+              <!-- Review 1 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img
+                        src="public/star-half.png"
+                        class="start-half"
+                        alt="star"
+                      />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Samantha D.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "I absolutely love this t-shirt! The design is unique and
+                    the fabric feels so comfortable. As a fellow designer, I
+                    appreciate the attention to detail. It's become my favorite
+                    go-to shirt."
+                  </p>
+                  <div class="review-date">Posted on August 14, 2023</div>
                 </div>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Alex M.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
-              </div>
-              <p class="review-text">
-                "This t-shirt is a must-have for anyone who appreciates good
-                design. The minimalistic yet stylish pattern caught my eye, and
-                the fit is perfect. I can see the designer's touch in every
-                aspect of this shirt."
-              </p>
-              <div class="review-date">Posted on August 15, 2023</div>
-            </div>
-          </div>
 
-          <!-- Review 3 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
+              <!-- Review 2 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Alex M.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "This t-shirt is a must-have for anyone who appreciates good
+                    design. The minimalistic yet stylish pattern caught my eye,
+                    and the fit is perfect. I can see the designer's touch in
+                    every aspect of this shirt."
+                  </p>
+                  <div class="review-date">Posted on August 15, 2023</div>
                 </div>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Ethan R.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
-              </div>
-              <p class="review-text">
-                "This t-shirt is a fusion of comfort and creativity. The fabric
-                is soft, and the design speaks volumes about the designer's
-                skill. It's like wearing a piece of art that reflects my passion
-                for both design and fashion."
-              </p>
-              <div class="review-date">Posted on August 16, 2023</div>
-            </div>
-          </div>
 
-          <!-- Review 4 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
+              <!-- Review 3 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Ethan R.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "This t-shirt is a fusion of comfort and creativity. The
+                    fabric is soft, and the design speaks volumes about the
+                    designer's skill. It's like wearing a piece of art that
+                    reflects my passion for both design and fashion."
+                  </p>
+                  <div class="review-date">Posted on August 16, 2023</div>
                 </div>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Olivia P.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
-              </div>
-              <p class="review-text">
-                "The t-shirt exceeded my expectations! The colors are vibrant
-                and the print quality is top-notch. Being a UI/UX designer
-                myself, I'm quite picky about aesthetics, and this t-shirt
-                definitely gets a thumbs up from me."
-              </p>
-              <div class="review-date">Posted on August 17, 2023</div>
-            </div>
-          </div>
 
-          <!-- Review 5 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
+              <!-- Review 4 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Olivia P.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "The t-shirt exceeded my expectations! The colors are
+                    vibrant and the print quality is top-notch. Being a UI/UX
+                    designer myself, I'm quite picky about aesthetics, and this
+                    t-shirt definitely gets a thumbs up from me."
+                  </p>
+                  <div class="review-date">Posted on August 17, 2023</div>
                 </div>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Liam K.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
-              </div>
-              <p class="review-text">
-                "As a UI/UX enthusiast, I value simplicity and functionality.
-                This t-shirt not only represents those principles but also feels
-                great to wear. It's evident that the designer poured their
-                creativity into making this t-shirt stand out."
-              </p>
-              <div class="review-date">Posted on August 18, 2023</div>
-            </div>
-          </div>
 
-          <!-- Review 6 -->
-          <div class="review-item">
-            <div class="review-content">
-              <div class="review-content-header">
-                <div class="review-stars">
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img src="public/star.png" alt="star" />
-                  <img
-                    src="public/star-half.png"
-                    class="start-half"
-                    alt="star"
-                  />
-                </div>
-                <div class="review-menu">
-                  <img src="./public/three-dot.png" alt="" />
+              <!-- Review 5 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Liam K.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "As a UI/UX enthusiast, I value simplicity and
+                    functionality. This t-shirt not only represents those
+                    principles but also feels great to wear. It's evident that
+                    the designer poured their creativity into making this
+                    t-shirt stand out."
+                  </p>
+                  <div class="review-date">Posted on August 18, 2023</div>
                 </div>
               </div>
-              <div class="reviewer-info">
-                <span class="reviewer-name">Ava H.</span>
-                <span class="check-icon-wrapper"
-                  ><img
-                    src="./public/check-icon.png"
-                    class="icon-check-img"
-                    alt=""
-                    srcset=""
-                /></span>
+
+              <!-- Review 6 -->
+              <div class="review-item">
+                <div class="review-content">
+                  <div class="review-content-header">
+                    <div class="review-stars">
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img src="public/star.png" alt="star" />
+                      <img
+                        src="public/star-half.png"
+                        class="start-half"
+                        alt="star"
+                      />
+                    </div>
+                    <div class="review-menu">
+                      <img src="./public/three-dot.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="reviewer-info">
+                    <span class="reviewer-name">Ava H.</span>
+                    <span class="check-icon-wrapper"
+                      ><img
+                        src="./public/check-icon.png"
+                        class="icon-check-img"
+                        alt=""
+                        srcset=""
+                    /></span>
+                  </div>
+                  <p class="review-text">
+                    "I'm not just wearing a t-shirt; I'm wearing a piece of
+                    design philosophy. The intricate details and thoughtful
+                    layout of the design make this shirt a conversation starter.
+                    "
+                  </p>
+                  <div class="review-date">Posted on August 19, 2023</div>
+                </div>
               </div>
-              <p class="review-text">
-                "I'm not just wearing a t-shirt; I'm wearing a piece of design
-                philosophy. The intricate details and thoughtful layout of the
-                design make this shirt a conversation starter. "
-              </p>
-              <div class="review-date">Posted on August 19, 2023</div>
             </div>
+
+            <button class="load-more-btn">Load More Reviews</button>
           </div>
         </div>
 
-        <button class="load-more-btn">Load More Reviews</button>
+        <!-- FAQs Tab -->
+        <div class="tab-panel" id="faqs" style="display: none">
+          <div class="tab-content-wrapper">
+            <h2>FAQs</h2>
+            <p>
+              Frequently Asked Questions about this product. Find answers to
+              common questions about sizing, shipping, returns, and more.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- You Might Also Like Section -->
       <div class="suggestions-section">
         <h2 class="suggestions-section-title">YOU MIGHT ALSO LIKE</h2>
-        <div class="products-grid">
-          <!-- Product 1 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="public/image 7.jpg" alt="Polo with Contrast Trims" />
-            </div>
-            <h3 class="product-title">Polo with Contrast Trims</h3>
-            <div class="product-rating">
-              <div class="stars">
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn" id="prevBtn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 18L9 12L15 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="products-carousel">
+            <div class="products-grid" id="productsGrid">
+              <!-- Product 1 -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img
+                    src="public/image 7.jpg"
+                    alt="Polo with Contrast Trims"
+                  />
+                </div>
+                <h3 class="product-title">Polo with Contrast Trims</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.0/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$212</span>
+                  <span class="original-price">$242</span>
+                  <span class="discount">-20%</span>
+                </div>
               </div>
-              <span class="rating-text">4.0/5</span>
-            </div>
-            <div class="product-price">
-              <span class="current-price">$212</span>
-              <span class="original-price">$242</span>
-              <span class="discount">-20%</span>
+
+              <!-- Product 2 -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img
+                    src="public/image 8.jpg"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h3 class="product-title">Gradient Graphic T-shirt</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">3.5/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$145</span>
+                </div>
+              </div>
+
+              <!-- Product 3 -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img
+                    src="public/image 9.jpg"
+                    alt="Polo with Tipping Details"
+                  />
+                </div>
+                <h3 class="product-title">Polo with Tipping Details</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.5/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$180</span>
+                </div>
+              </div>
+
+              <!-- Product 4 -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="public/image 10.jpg" alt="Black Striped T-shirt" />
+                </div>
+                <h3 class="product-title">Black Striped T-shirt</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">5.0/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$120</span>
+                  <span class="original-price">$150</span>
+                  <span class="discount">-30%</span>
+                </div>
+              </div>
+
+              <!-- Product 5 (Duplicate 1) -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="public/image 7.jpg" alt="Casual Polo Shirt" />
+                </div>
+                <h3 class="product-title">Casual Polo Shirt</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.8/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$195</span>
+                  <span class="original-price">$220</span>
+                  <span class="discount">-15%</span>
+                </div>
+              </div>
+
+              <!-- Product 6 (Duplicate 2) -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="public/image 8.jpg" alt="Retro Graphic Tee" />
+                </div>
+                <h3 class="product-title">Retro Graphic Tee</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.2/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$160</span>
+                </div>
+              </div>
+
+              <!-- Product 7 (Duplicate 3) -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="public/image 9.jpg" alt="Premium Polo Design" />
+                </div>
+                <h3 class="product-title">Premium Polo Design</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.9/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$225</span>
+                  <span class="original-price">$250</span>
+                  <span class="discount">-10%</span>
+                </div>
+              </div>
+
+              <!-- Product 8 (Duplicate 4) -->
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="public/image 10.jpg" alt="Classic Striped Shirt" />
+                </div>
+                <h3 class="product-title">Classic Striped Shirt</h3>
+                <div class="product-rating">
+                  <div class="stars">
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                    <img src="public/star.png" alt="star" />
+                  </div>
+                  <span class="rating-text">4.3/5</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">$135</span>
+                  <span class="original-price">$170</span>
+                  <span class="discount">-25%</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="public/image 8.jpg" alt="Gradient Graphic T-shirt" />
-            </div>
-            <h3 class="product-title">Gradient Graphic T-shirt</h3>
-            <div class="product-rating">
-              <div class="stars">
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-              </div>
-              <span class="rating-text">3.5/5</span>
-            </div>
-            <div class="product-price">
-              <span class="current-price">$145</span>
-            </div>
-          </div>
-
-          <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="public/image 9.jpg" alt="Polo with Tipping Details" />
-            </div>
-            <h3 class="product-title">Polo with Tipping Details</h3>
-            <div class="product-rating">
-              <div class="stars">
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-              </div>
-              <span class="rating-text">4.5/5</span>
-            </div>
-            <div class="product-price">
-              <span class="current-price">$180</span>
-            </div>
-          </div>
-
-          <!-- Product 4 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="public/image 10.jpg" alt="Black Striped T-shirt" />
-            </div>
-            <h3 class="product-title">Black Striped T-shirt</h3>
-            <div class="product-rating">
-              <div class="stars">
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-                <img src="public/star.png" alt="star" />
-              </div>
-              <span class="rating-text">5.0/5</span>
-            </div>
-            <div class="product-price">
-              <span class="current-price">$120</span>
-              <span class="original-price">$150</span>
-              <span class="discount">-30%</span>
-            </div>
-          </div>
+          <button class="carousel-btn next-btn" id="nextBtn">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18L15 12L9 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
   <footer style="height: 200px"></footer>
 </html>
