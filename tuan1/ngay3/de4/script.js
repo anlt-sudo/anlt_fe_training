@@ -4,11 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabPanels = document.querySelectorAll(".tab-panel");
 
   tabs.forEach((tab) => {
-    tab.addEventListener("click", function () {
+    tab.addEventListener("click", function (e) {
       const targetTab = this.getAttribute("data-tab");
 
       // Remove active class from all tabs and panels
-      tabs.forEach((t) => t.classList.remove("active"));
+      console.log(e.parentElement);
+
+      // e.parentElement.classList.remove("active");
+      // tabs.forEach((t) => t.classList.remove("active"));
       tabPanels.forEach((panel) => {
         panel.classList.remove("active");
         panel.style.display = "none";

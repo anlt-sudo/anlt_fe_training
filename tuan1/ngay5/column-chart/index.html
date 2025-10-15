@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biểu đồ Lịch sử Level of Position</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        font-family: sans-serif;
+      }
+      /* Container chính, làm gốc cho việc định vị tuyệt đối */
+      .chart-container {
+        position: relative;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+
+      /* Định vị tuyệt đối cho toàn bộ khối chú thích */
+      .legend {
+        position: absolute;
+        /* Các giá trị top và left sẽ được thiết lập bởi JavaScript */
+      }
+
+      .legend-item {
+        gap: 10px;
+      }
+
+      .legend-color-box {
+        background-color: #3366cc;
+        flex-shrink: 0;
+      }
+
+      /* Container cho các dòng chữ, làm gốc định vị cho từng chữ */
+      .legend-text-container {
+        position: relative;
+        font-size: 11px;
+        color: #666;
+        height: 100px;
+      }
+
+      .legend-text-container span {
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart-container">
+      <canvas id="myChart" width="437" height="225"></canvas>
+
+      <!-- Chú thích sẽ được định vị bởi JavaScript -->
+      <div class="legend" id="chart-legend">
+        <div class="legend-item">
+          <div class="legend-color-box" id="legend-color-box"></div>
+          <div class="legend-text-container">
+            <span id="legend-level">LEVEL</span>
+            <span id="legend-of">OF</span>
+            <span id="legend-position">POSITION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
