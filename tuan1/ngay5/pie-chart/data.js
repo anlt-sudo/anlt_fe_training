@@ -1,75 +1,41 @@
-export const chartData = [
-  {
-    name: "ĐÃ ĐẠT",
-    y: 80,
-    color: "#00a9e0",
-  },
-  {
-    name: "CHƯA ĐẠT",
-    y: 20,
-    color: "#e41e26",
-    sliced: true,
-    selected: true,
-    shadow: true,
-    color: Highcharts.color("#e41e26").brighten(0.15).get(),
-    borderWidth: 4,
-    borderColor: "#800000",
-    states: {
-      hover: {
-        borderWidth: 4,
-        borderColor: "#800000",
-      },
-    },
-    dataLabels: {
-      rotation: -15, // Thêm độ nghiêng cho label
-      verticalAlign: "top", // Thay đổi từ "top" thành "middle"
-      y: -120, // Hạ thấp từ -120 xuống -20
-      style: {
-        fontWeight: "bold",
-        fontSize: "14px",
-        textShadow: "1px 1px 2px rgba(0,0,0,0.5)", // Bóng chữ
-      },
-    },
-  },
+export const canvas = document.getElementById("myPieChart");
+export const ctx = canvas.getContext("2d");
+
+// Tâm và bán kính của biểu đồ
+export const centerX = canvas.width / 2;
+export const centerY = canvas.height / 2;
+export const radius = 120;
+
+// --- CÁC THAM SỐ CÓ THỂ ĐIỀU CHỈNH ---
+export const verticalTilt = 0.3;
+export const explodedSliceTilt = 0.3;
+export const explosionOffset = 20;
+export const depth = 30;
+export const explodedRadius = radius * 0.8;
+export const explodedDepth = 15;
+export const mainDepth = 30;
+
+export const data = [
+  { value: 80, color: "#0099CC", label: "80% ĐÃ ĐẠT", exploded: false },
+  { value: 20, color: "#E62E2D", label: "20% CHƯA ĐẠT", exploded: true },
 ];
 
-export const chartConfig = {
-  chart: {
-    renderTo: "container",
-    type: "pie",
-    options3d: {
-      enabled: true,
-      alpha: 72,
-      beta: 0,
-      depth: 60,
-    },
-  },
-  title: {
-    text: "BIỂU ĐỒ TỔNG QUAN KHUNG NĂNG LỰC",
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: "pointer",
-      depth: 60,
-      startAngle: 100, // -90 độ để bắt đầu từ hướng 3 giờ
-      slicedOffset: 40, // Khoảng cách tách cho các miếng bánh
-      borderWidth: 4,
-      frame: {
-        bottom: { size: 1, color: "rgba(0,0,0,0.1)" },
-        back: { size: 1, color: "rgba(0,0,0,0.05)" },
-        side: { size: 1, color: "rgba(0,0,0,0.08)" },
-      },
-      dataLabels: {
-        enabled: true,
-        format: "<b>{point.name}</b>: {point.percentage:.1f} %",
-        verticalAlign: "top",
-        y: -80, // Đẩy label lên trên
-        style: {
-          fontSize: "14px",
-          fontWeight: "bold",
-        },
-      },
-    },
-  },
-};
+// Hàm phụ trợ để làm tối màu
+export function darkenColor(color, percent) {
+  let num = parseInt(color.slice(1), 16),
+    amt = Math.round(2.55 * percent),
+    R = (num >> 16) - amt,
+    G = ((num >> 8) & 0x00ff) - amt,
+    B = (num & 0x0000ff) - amt;
+  return (
+    "#" +
+    (
+      0x1000000 +
+      (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
+      (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
+      (B < 255 ? (B < 1 ? 0 : B) : 255)
+    )
+      .toString(16)
+      .slice(1)
+  );
+}
