@@ -8,6 +8,138 @@
   </head>
   <body>
     <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="mobile-header">
+          <div class="mobile-header-logo-wrapper">
+            <div class="menu-toggle">
+              <img src="public/menu-icon.png" alt="Menu" />
+            </div>
+            <div class="logo">SHOP.CO</div>
+          </div>
+          <div class="mobile-actions">
+            <img
+              src="public/search-icon-black.png"
+              alt="Search"
+              class="mobile-search"
+            />
+            <img src="public/cart.png" alt="Cart" />
+            <img src="public/user.png" alt="Cart" />
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#" class="nav-item shop-nav"
+            >Shop
+            <img src="public/narrow-icon.png" alt="Dropdown" />
+          </a>
+          <a href="#" class="nav-item">On Sale</a>
+          <a href="#" class="nav-item">New Arrivals</a>
+          <a href="#" class="nav-item">Brands</a>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." />
+          <button>
+            <img src="public/search-btn.png" alt="Search" />
+          </button>
+        </div>
+        <div class="user-actions">
+          <img src="public/user.png" alt="User" />
+          <img src="public/cart.png" alt="Cart" />
+        </div>
+      </header>
+
+      <!-- Main product -->
+      <div class="main-product">
+        <div class="product-gallery">
+          <div class="main-image">
+            <img src="public/image 1.png" alt="ONE LIFE GRAPHIC T-SHIRT" />
+          </div>
+          <div class="thumbnail-list">
+            <img src="public/image 7.jpg" alt="Product view 1" class="active" />
+            <img src="public/image 8.jpg" alt="Product view 2" />
+            <img src="public/image 9.jpg" alt="Product view 3" />
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1 class="product-title">ONE LIFE GRAPHIC T-SHIRT</h1>
+          <div class="product-rating">
+            <div class="stars">
+              <img src="public/star.png" alt="star" />
+              <img src="public/star.png" alt="star" />
+              <img src="public/star.png" alt="star" />
+              <img src="public/star.png" alt="star" />
+              <img src="public/star-half.png" class="star-half" alt="star" />
+            </div>
+            <span class="rating-text">4.5/5</span>
+          </div>
+
+          <div class="product-price">
+            <span class="current-price">$260</span>
+            <span class="original-price">$300</span>
+            <span class="discount">-15%</span>
+          </div>
+
+          <!-- Description -->
+
+          <div class="product-description-wrapper">
+            <p class="product-description">
+              This t-shirt is a perfect blend of comfort and style, designed
+              with a unique graphic. This t-shirt is a perfect blend of comfort
+              and style, designed with a unique graphic. This t-shirt is a
+              perfect blend of comfort and style, designed with a unique
+              graphic. This t-shirt is a perfect blend of comfort and style,
+              designed with a unique graphic. This t-shirt is a perfect blend of
+              comfort and style, designed with a unique graphic. This t-shirt is
+              a perfect blend of comfort and style, designed with a unique
+              graphic.
+            </p>
+          </div>
+
+          <div class="color-options">
+            <h3>Select Color</h3>
+            <div class="color-list">
+              <button
+                class="color-btn active"
+                style="background-color: #4a4a4a"
+              >
+                <img src="./public/check-tick.png" alt="" srcset="" />
+              </button>
+              <button
+                class="color-btn"
+                style="background-color: #3c8bad"
+              ></button>
+              <button
+                class="color-btn"
+                style="background-color: #21262b"
+              ></button>
+            </div>
+          </div>
+
+          <div class="size-options">
+            <h3>Choose Size</h3>
+            <div class="size-list">
+              <button class="size-btn">Small</button>
+              <button class="size-btn active">Medium</button>
+              <button class="size-btn">Large</button>
+              <button class="size-btn">X-Large</button>
+            </div>
+          </div>
+
+          <div class="product-control-wrapper">
+            <div class="quantity-control">
+              <button class="qty-btn minus">-</button>
+              <input type="number" value="1" min="1" max="99" />
+              <button class="qty-btn plus">+</button>
+            </div>
+
+            <div class="product-actions">
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Product Details Tabs -->
       <div class="product-tabs">
         <div class="tab" data-tab="product-details">Product Details</div>
