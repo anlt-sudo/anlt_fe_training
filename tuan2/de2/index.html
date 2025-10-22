@@ -40,9 +40,35 @@
 
     <div class="menu-container">
       <ul>
-        <li class="active"><a href="#">HOME</a></li>
+        <li><a href="#">HOME</a></li>
         <li><a href="#">店舗紹介</a></li>
-        <li><a href="#">エステ</a></li>
+        <li class="has-submenu">
+          <a href="#">エステ</a>
+          <input type="checkbox" id="submenu-toggle-1" class="submenu-toggle" />
+          <label for="submenu-toggle-1" class="submenu-arrow"></label>
+
+          <ul class="submenu">
+            <li class="has-sub-submenu">
+              <a href="#">フェイシャル</a>
+              <input
+                type="checkbox"
+                id="submenu-toggle-2"
+                class="submenu-toggle"
+              />
+              <label for="submenu-toggle-2" class="submenu-arrow"></label>
+
+              <ul class="sub-submenu">
+                <li><a href="#">ダイエット</a></li>
+                <li><a href="#">脱毛</a></li>
+                <li><a href="#">美肌再生プログラム</a></li>
+              </ul>
+            </li>
+            <li><a href="#">ダイエット</a></li>
+            <li><a href="#">脱毛</a></li>
+            <li><a href="#">美肌再生プログラム</a></li>
+          </ul>
+        </li>
+
         <li><a href="#">ヘアクリニック</a></li>
         <li><a href="#">よくあるご質問</a></li>
         <li><a href="#">お客様の声</a></li>
@@ -283,5 +309,6 @@
         <p>Copyright Feminine (フェミニン) All Rights Reserved.</p>
       </div>
     </footer>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
