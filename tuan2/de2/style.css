@@ -1,10 +1,11 @@
 @charset "UTF-8";
 /* General Body Styles */
 body {
+  background-image: linear-gradient(to bottom, #fff5e9 0%, #fff5e9 5%, #ffffff 100%);
   font-family: "MS PGothic", sans-serif;
   margin: 0;
-  background-color: #fdfaf4;
   color: #5a4a40;
+  min-height: 100vh;
 }
 
 a {
@@ -56,7 +57,8 @@ header {
   padding: 5px 0;
   width: 960px;
 }
-.header-top .header-title-bottom {
+
+.header-title-bottom {
   text-align: right;
   font-size: 0.9em;
   color: #5a4a40;
@@ -76,10 +78,12 @@ header {
   display: flex;
   align-items: center;
 }
+
 .logo img {
   height: 86px;
   width: 230px;
 }
+
 .logo .logo-img-01 {
   width: 194px;
 }
@@ -89,25 +93,31 @@ header {
   align-items: center;
   gap: 8px;
 }
+
 .contact-info .tel-container img {
   height: 100%;
 }
+
 .contact-info .tel-container .tel {
   font-size: 2em;
   font-weight: bold;
   color: #e89b3d;
 }
+
 .contact-info p {
   margin: 0;
   text-align: right;
   font-size: 0.9em;
   line-height: 1.6;
 }
+
 .contact-info .holiday {
   color: #e89b3d;
 }
 
-/* Container chính của menu */
+/* =================================== */
+/* === MENU CONTAINER (DESKTOP & MOBILE) === */
+/* =================================== */
 .menu-container {
   width: 100%;
   display: flex;
@@ -133,6 +143,7 @@ header {
   flex: 1;
 }
 
+/* Vertical lines between menu items */
 .menu-container > ul > li::before,
 .menu-container > ul > li:last-child::after {
   content: "";
@@ -175,186 +186,97 @@ header {
   color: white;
 }
 
+/* --- Submenu & Sub-submenu General Styles --- */
 .submenu,
 .sub-submenu {
-  position: absolute;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: visibility 0s 0.2s, opacity 0.2s ease, transform 0.2s ease;
-  width: 100%;
-  box-sizing: border-box;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block;
-  background-color: #fec472;
 }
 
-.sub-submenu {
-  background-color: #f5c474;
-  border: 1px solid #e0a850;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-width: 180px;
-  margin-top: 2px;
-  z-index: 1001; /* Đảm bảo hiển thị trên các items khác */
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-ul.submenu {
-  top: 100%;
-  left: 0;
-  margin-top: 4px;
-  overflow: visible; /* Đảm bảo sub-submenu không bị cắt */
-  min-height: auto;
-  transition: height 0.3s ease; /* Smooth transition cho height */
-}
-
-li.has-submenu:hover > ul.submenu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0s;
-}
-
-ul.sub-submenu {
-  top: 100%;
-  left: 0;
-}
-
-li.has-sub-submenu:hover > ul.sub-submenu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0s;
-}
-
-ul.submenu li,
-ul.sub-submenu li {
-  text-align: center;
-  border-bottom: 1px solid #d29c5d;
-  box-sizing: border-box;
-  transition: transform 0.3s ease, margin-bottom 0.3s ease;
-}
-
-ul.submenu li.has-sub-submenu {
-  transition: transform 0.3s ease, margin-bottom 0.3s ease;
-}
-
-ul.submenu li:last-child,
-ul.sub-submenu li:last-child {
-  border-bottom: none;
-}
-
-ul.submenu li::before,
-ul.submenu li::after,
-ul.sub-submenu li::before,
-ul.sub-submenu li::after {
-  display: none;
-}
-
-ul.submenu a,
-ul.sub-submenu a {
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-  color: #8c6239;
-  font-size: 14px;
-  background-color: transparent;
-  border-radius: 0;
-  margin: 0;
-  transition: background-color 0.2s ease;
-}
-
-ul.submenu a {
-  margin: 4px;
-  border-radius: 4px;
-}
-
-ul.sub-submenu a {
-  padding: 10px 15px;
-  font-size: 13px;
-  color: #6b4a2b;
-  border-bottom: 1px solid #e0a850;
-}
-
-ul.sub-submenu li:last-child a {
-  border-bottom: none;
-}
-
-ul.submenu a:hover,
-ul.sub-submenu a:hover {
-  background-color: #f7941d;
-  color: white;
-}
-
-ul.submenu li.has-sub-submenu {
-  position: relative;
-}
-
-ul.submenu li.has-sub-submenu:hover {
-  margin-bottom: 100px; /* Tạo khoảng trống để chứa sub-submenu */
-}
-
-ul.submenu li.has-sub-submenu:hover ~ li {
-  transform: translateY(100px); /* Đẩy các items phía sau xuống dưới */
-}
-
-/* Reset về trạng thái ban đầu khi không hover */
-ul.submenu li.has-sub-submenu:not(:hover) {
-  margin-bottom: 0; /* Thu về margin ban đầu */
-}
-
-ul.submenu li.has-sub-submenu:not(:hover) ~ li {
-  transform: translateY(0); /* Thu về vị trí ban đầu */
-}
-
-/* Desktop styles - ẩn mobile elements */
+/* =================================== */
+/* === DESKTOP MENU STYLES === */
+/* =================================== */
 @media (min-width: 769px) {
-  /* Ẩn tất cả checkbox và arrow cho mobile */
+  /* Hide mobile-specific elements */
   .submenu-toggle,
   .submenu-arrow {
-    display: none !important;
+    display: none;
   }
-  /* Reset menu container cho desktop */
-  .menu-container > ul {
-    flex-direction: row;
-  }
-  .menu-container > ul > li {
-    width: auto;
-    border-bottom: none;
-    flex: 1;
-  }
-  .menu-container > ul > li > a {
-    text-align: center;
-    padding: 16px 0;
-    margin: 0 4px;
-    border-radius: 4px;
-  }
-  /* Desktop submenu behavior */
-  .has-sub-submenu {
-    position: relative;
-  }
-  .has-sub-submenu:hover .sub-submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0s;
-  }
-  .sub-submenu {
+  .submenu {
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    min-width: 200px;
+    box-sizing: border-box;
+    background-color: #fec472;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: visibility 0.2s, opacity 0.2s, transform 0.2s;
+    margin-top: 4px;
   }
-  /* Reset mobile specific styles */
-  .submenu,
+  li.has-submenu:hover > ul.submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .submenu li {
+    text-align: center;
+    border-bottom: 1px solid #d29c5d;
+    position: relative; /* Important for sub-submenu positioning */
+  }
+  .submenu li:last-child {
+    border-bottom: none;
+  }
+  .submenu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #8c6239;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+    margin: 4px;
+  }
+  .submenu a:hover {
+    background-color: #f7941d;
+    color: white;
+  }
+  /* --- Sub-Submenu Desktop --- */
   .sub-submenu {
-    max-height: none;
-    overflow: visible;
+    position: absolute;
+    top: -4px;
+    left: 100%; /* Position to the right of the parent li */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5c474;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10px); /* Slide from the left */
+    transition: visibility 0.2s, opacity 0.2s, transform 0.2s;
+  }
+  li.has-sub-submenu:hover > .sub-submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .sub-submenu a {
+    padding: 12px;
+    font-size: 14px;
+    color: #6b4a2b;
+    margin: 0;
+    border-radius: 4px;
+    margin: 4px;
+  }
+  .sub-submenu li:last-child a {
+    border-bottom: none;
   }
 }
+/* Hero Section */
 .hero {
   position: relative;
   width: 960px;
@@ -660,6 +582,7 @@ ul.submenu li.has-sub-submenu:not(:hover) ~ li {
   color: red;
 }
 
+/* Sidebar Widgets */
 /* --- Widget Container --- */
 .widget {
   background: #fff;
@@ -751,6 +674,7 @@ ul.submenu li.has-sub-submenu:not(:hover) ~ li {
 .widget-campaign {
   margin-bottom: 20px;
 }
+
 .widget-campaign img {
   width: 100%;
   display: block;
@@ -760,6 +684,7 @@ ul.submenu li.has-sub-submenu:not(:hover) ~ li {
 .widget-recruitment {
   margin-bottom: 20px;
 }
+
 .widget-recruitment img {
   width: 100%;
   display: block;
@@ -775,7 +700,7 @@ ul.submenu li.has-sub-submenu:not(:hover) ~ li {
   border-radius: 4px;
 }
 
-.widget-inner {
+.widget.access .widget-inner {
   background-color: #fff;
   padding: 14px;
 }
@@ -865,6 +790,7 @@ ul.submenu li.has-sub-submenu:not(:hover) ~ li {
   margin-right: 10px;
 }
 
+/* Footer Styles */
 footer {
   background-color: #fbf5eb;
   color: #8c6239;
@@ -1038,14 +964,15 @@ footer {
 /* =============================================== */
 /* === RESPONSIVE CHO THIẾT BỊ DI ĐỘNG === */
 /* =============================================== */
-/* Áp dụng khi chiều rộng màn hình từ 768px trở xuống */
 @media (max-width: 768px) {
   /* --- 1. THIẾT LẬP CHUNG & CONTAINER --- */
-  .header-wrapper,
-  .menu-container > ul,
   .container,
+  .header-top,
+  .header-main,
+  .menu-container > ul,
+  .hero,
   .footer-container {
-    width: 100%; /* Cho phép các container chính co giãn */
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
@@ -1061,10 +988,9 @@ footer {
     align-items: stretch;
   }
   .header-top {
-    width: 100%;
-    padding: 10px 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    box-sizing: border-box;
   }
   .header-top p {
     font-size: 12px;
@@ -1072,14 +998,13 @@ footer {
     line-height: 1.4;
   }
   .header-title-bottom {
-    display: none; /* Ẩn dòng thứ 2 trên mobile */
+    display: none;
   }
   .header-main {
     flex-direction: column;
-    padding: 20px 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
     justify-content: center;
   }
   .logo {
@@ -1127,7 +1052,7 @@ footer {
     font-weight: bold;
     margin-top: 8px;
   }
-  /* --- 3. MENU ĐIỀU HƯỚNG (LÀM LẠI VỚI ACCORDION DROPDOWN) --- */
+  /* --- 3. MENU ACCORDION TRÊN MOBILE --- */
   .menu-container {
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
@@ -1135,246 +1060,176 @@ footer {
   }
   .menu-container > ul {
     flex-direction: column;
-    width: 100%;
     margin: 0;
     padding: 0;
   }
-  /* Kiểu cho mỗi mục menu chính */
   .menu-container > ul > li {
     width: 100%;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
-    flex-wrap: wrap; /* Cho phép menu con xuống dòng */
-    position: relative; /* Làm mốc cho mũi tên */
+    flex-wrap: wrap;
+    position: relative;
   }
   .menu-container > ul > li:last-child {
     border-bottom: none;
   }
-  /* Bỏ các viền dọc không cần thiết */
   .menu-container > ul > li::before,
-  .menu-container > ul > li:last-child::after,
-  .menu-container > ul > li > border-right {
+  .menu-container > ul > li:last-child::after {
     display: none;
   }
-  /* Kiểu cho link chính */
   .menu-container > ul > li > a {
-    text-align: left; /* Căn trái để có chỗ cho mũi tên */
+    text-align: left;
     padding: 15px;
     margin: 0;
     border-radius: 0;
-    flex-grow: 1; /* Cho phép link chiếm hết không gian có thể */
+    flex-grow: 1;
   }
-  /* --- PHẦN QUAN TRỌNG: KỸ THUẬT CHECKBOX --- */
-  /* 1. Ẩn checkbox đi */
+  /* --- KỸ THUẬT CHECKBOX HACK --- */
   .submenu-toggle {
     display: none;
   }
-  /* 2. Kiểu cho mũi tên (label) */
   .submenu-arrow {
     position: absolute;
     right: 0;
     top: 0;
-    width: 50px; /* Vùng có thể nhấp */
-    height: 50px; /* Vùng có thể nhấp */
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
-  /* Vẽ mũi tên bằng pseudo-element */
+  /* Adjust arrow positioning for items with submenu */
+  li.has-submenu {
+    position: relative;
+  }
+  li.has-submenu > a {
+    width: calc(100% - 50px);
+  }
   .submenu-arrow::before {
     content: "";
     width: 0;
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #5a4a42; /* Mũi tên hướng xuống */
+    border-top: 8px solid #5a4a42;
+    /* FIX: Thêm trạng thái ban đầu và transition */
+    transform: rotate(0deg);
     transition: transform 0.3s ease;
   }
-  /* 3. Ẩn các menu con theo mặc định */
   .submenu,
   .sub-submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    /* Dùng max-height để tạo hiệu ứng xổ xuống mượt mà */
+    width: 100% !important;
+    flex-basis: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out !important;
+    background-color: #f7f0e6;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none;
   }
-  /* 4. HIỂN THỊ MENU CON KHI CHECKBOX ĐƯỢC CHỌN */
-  /* Áp dụng chiều cao riêng cho menu cấp 1 */
-  .has-submenu > .submenu-toggle:checked + .submenu-arrow + .submenu {
-    max-height: 400px;
+  /* FIX: Sử dụng selector chính xác hơn để hiển thị menu */
+  .submenu-toggle:checked ~ .submenu,
+  .submenu-toggle:checked ~ .sub-submenu {
+    max-height: 500px;
+    border-top: 1px solid #e0e0e0;
   }
-  /* Áp dụng chiều cao riêng cho menu cấp 2 */
-  .has-sub-submenu .submenu-toggle:checked + .submenu-arrow + .sub-submenu {
-    max-height: 150px;
+  /* FIX: Selector chính xác hơn để xoay mũi tên */
+  .submenu-toggle:checked ~ .submenu-arrow::before {
+    transform: rotate(180deg);
   }
-  /* Thu về trạng thái ban đầu khi không checked */
-  .has-submenu > .submenu-toggle:not(:checked) + .submenu-arrow + .submenu {
-    max-height: 0;
-  }
-  .has-sub-submenu .submenu-toggle:not(:checked) + .submenu-arrow + .sub-submenu {
-    max-height: 0;
-  }
-  /* 5. XOAY MŨI TÊN KHI CHECKBOX ĐƯỢC CHỌN */
-  .submenu-toggle:checked + .submenu-arrow::before {
-    transform: rotate(180deg); /* Xoay mũi tên hướng lên */
-  }
-  /* Thu về trạng thái ban đầu cho mũi tên */
-  .submenu-toggle:not(:checked) + .submenu-arrow::before {
-    transform: rotate(0deg); /* Mũi tên hướng xuống */
-  }
-  /* --- Kiểu dáng cho các menu con --- */
   .submenu li,
   .sub-submenu li {
     width: 100%;
-    background-color: #f7f0e6; /* Nền màu nhạt hơn */
     border-top: 1px solid #e0e0e0;
+  }
+  .submenu > li:first-child,
+  .sub-submenu > li:first-child {
+    border-top: none;
   }
   .submenu a,
   .sub-submenu a {
-    padding-left: 30px; /* Thụt lề cho menu cấp 1 */
+    padding: 12px 30px;
+    display: block;
+  }
+  .sub-submenu {
+    background-color: #f0e6d6;
   }
   .sub-submenu a {
-    padding-left: 45px; /* Thụt lề sâu hơn cho menu cấp 2 */
+    padding-left: 45px;
   }
-  /* Vô hiệu hóa desktop hover trên mobile */
-  .has-sub-submenu:hover .sub-submenu {
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  .submenu li.has-sub-submenu:hover {
-    margin-bottom: 0 !important;
-  }
-  .submenu li.has-sub-submenu:hover ~ li {
-    transform: none !important;
-  }
-  /* --- XỬ LÝ SUB-SUBMENU TRONG MOBILE --- */
-  .has-sub-submenu {
-    width: 100%;
-    position: relative;
-    display: flex;
+  li.has-sub-submenu {
     flex-wrap: wrap;
-  }
-  .has-sub-submenu > a {
-    flex: 1;
-    display: block;
     position: relative;
-    padding-right: 50px; /* Để chỗ cho mũi tên */
   }
-  /* Mũi tên cho sub-submenu */
-  .has-sub-submenu .submenu-arrow {
+  li.has-sub-submenu > a {
+    width: calc(100% - 50px);
+  }
+  /* Styles for sub-submenu arrow inside submenu */
+  .submenu li.has-sub-submenu .submenu-arrow {
     position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 32px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .has-sub-submenu .submenu-arrow::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 6px solid #8c6239;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    transition: transform 0.3s ease;
-  }
-  .has-sub-submenu .submenu-toggle:checked + .submenu-arrow::before {
-    transform: rotate(90deg);
-  }
-  .has-sub-submenu .submenu-toggle:not(:checked) + .submenu-arrow::before {
-    transform: rotate(0deg);
-  }
-  /* Sub-submenu styling */
-  .sub-submenu {
-    background-color: #f0e6d6;
-    border-left: 3px solid #f7941d;
-  }
-  .sub-submenu li {
-    background-color: #f0e6d6;
-    border-top: 1px solid #ddd;
-  }
-  .sub-submenu a {
-    padding-left: 60px; /* Thụt lề sâu hơn nữa */
-    font-size: 13px;
-    color: #6b4a2b;
-  }
-  .sub-submenu a:hover {
-    background-color: #f7941d;
-    color: white;
+    z-index: 1;
   }
   /* --- 4. BỐ CỤC CHÍNH (CONTENT & SIDEBAR) --- */
   .container {
-    flex-direction: column; /* Xếp sidebar xuống dưới content */
+    flex-direction: column;
   }
   .content,
   .sidebar {
-    width: 100%; /* Cho cả hai cột chiếm hết chiều rộng */
+    width: 100%;
+    margin-right: 0;
   }
   .sidebar {
-    margin-top: 40px; /* Tạo khoảng cách giữa content và sidebar */
+    margin-top: 40px;
   }
   /* --- 4.5. HERO SECTION MOBILE --- */
   .hero {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
   }
-  .hero-image {
-    width: 100%;
-    position: relative;
-  }
-  .hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
-  }
-  /* Ẩn hero-nav trên mobile vì không cần thiết */
-  .hero-nav {
-    display: none;
-  }
-  /* Ẩn hero-text trên mobile nếu có */
+  .hero-nav,
   .hero-text {
     display: none;
   }
   /* --- 5. CÁC PHẦN TỬ TRONG CONTENT --- */
   .concept-content {
-    flex-direction: column; /* Xếp ảnh và chữ trong section concept thành cột */
+    flex-direction: column;
   }
   .concept-content img {
-    width: 100%; /* Ảnh chiếm hết chiều rộng */
-    height: auto; /* Chiều cao tự động để không bị méo */
+    width: 100%;
+    height: auto;
     margin-right: 0;
     margin-bottom: 20px;
   }
   .menu-items {
-    flex-direction: column; /* Xếp các thẻ menu thành cột */
+    flex-direction: column;
     gap: 20px;
   }
   .menu-item {
-    width: 100%; /* Mỗi thẻ menu chiếm hết chiều rộng */
+    width: 100%;
   }
   .news-header {
-    flex-direction: column; /* Xếp tiêu đề và link "lưu trữ" thành cột */
-    align-items: flex-start; /* Căn trái */
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
   }
   /* --- 6. CÁC PHẦN TỬ TRONG SIDEBAR --- */
   .promo-box {
     width: 100%;
-    height: auto; /* Chiều cao tự động */
+    height: auto;
     padding: 15px;
   }
   .promo-box h2 {
@@ -1385,22 +1240,28 @@ footer {
   }
   /* --- 7. FOOTER --- */
   .footer-container {
-    flex-direction: column; /* Chuyển footer thành dạng cột */
+    flex-direction: column;
     gap: 30px;
+    padding: 0 15px;
   }
   .footer-left-column,
   .footer-right-column {
-    width: 100%; /* Cho cả hai cột footer chiếm hết chiều rộng */
-    padding: 0; /* Reset padding */
-    border: none; /* Bỏ viền ngăn cách */
+    width: 100%;
+    padding: 0;
+    border: none;
+    margin-right: 0;
   }
   .footer-left-column {
-    flex-direction: column; /* Xếp info và nav trong cột trái thành cột */
+    flex-direction: column;
     gap: 30px;
   }
   .footer-nav {
-    padding-left: 0; /* Reset padding */
-    justify-content: flex-start; /* Căn trái các menu nav */
+    padding: 0;
+    justify-content: flex-start;
+    border: none;
+  }
+  .footer-menu {
+    margin-left: 0;
   }
 }
 
